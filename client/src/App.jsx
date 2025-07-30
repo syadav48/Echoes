@@ -1,16 +1,14 @@
+// App.js
 import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
+import MainLayout from './components/MainLayout';
 
 function App() {
   return (
-    <Container>
-      <Typography variant="h3" gutterBottom>
-        Memory Sharing App - Echoes
-      </Typography>
-      <Button variant="contained" color="primary">
-        Get Started
-      </Button>
-    </Container>
+    <ThemeProvider theme={theme}>
+      <MainLayout />
+    </ThemeProvider>
   );
 }
 
